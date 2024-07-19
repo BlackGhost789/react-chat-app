@@ -1,0 +1,10 @@
+.app{
+    height: 90vh;
+    width: max(40vw, 320px);
+    background-color: rgb(242, 242, 242);
+    border-radius: 13px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

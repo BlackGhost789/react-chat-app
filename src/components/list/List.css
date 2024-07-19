@@ -1,0 +1,26 @@
+.listt{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.list-item{
+    display: flex;
+    background-color: white;
+    border: 1px solid #c9c9c9;
+    border-radius: 5px;
+    padding: 0px 5px;
+}
+
+.list-item .emiter{
+    color: rgb(134, 99, 209);
+    font-weight: 700;
+    margin-right: 5px;
+
+}
+.list-item .message{
+    color: #3f3f3f;
+    overflow-wrap: break-word;
+}
