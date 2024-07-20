@@ -20,13 +20,14 @@ const Form = () => {
       'emiter':user,
       'message':message
     })
+    setMessage('')
   }
 
 
 
   return (
     <div className='form'>
-        <input type="text" placeholder='Hello' onChange={(e)=>setMessage(e.target.value)}/>
+        <input type="text" placeholder='Hello' onChange={(e)=>setMessage(e.target.value)} value={message}/>
         <button onClick={submit}>send</button>
     </div>
   )

@@ -11,7 +11,7 @@ function App() {
 
   const socketRef = React.useRef(null);
   const [username, setUsername] = useState('')
-  const socket = io('localhost:3001')
+  const socket = io('https://web-socket-chat-server.onrender.com/')
 
   const setUname= (data)=>{
     Cookies.set('username', data)

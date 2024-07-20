@@ -37,7 +37,7 @@ const Login = ({uname}) => {
             <button onClick={submit}>login</button>
             {errorLogin}
         </div>
-        <p>just enter a username plz <span><Link to='/signin' replace>Sign in</Link></span></p>
+        <p>just enter a username plz </p>
     </div>
   )
 }

@@ -1,16 +1,22 @@
 import React, { useEffect , useState} from 'react'
 import './List.css'
 import io from 'socket.io-client';
-
+const socket = io('https://web-socket-chat-server.onrender.com/')
 const List = () => {
     const [data, setData] = useState([])
 
-    const socket = io('https://web-socket-chat-server.onrender.com/')
+    
 
 
-        socket.on('msg', (msg)=>{
-            setData([...data , msg])
-        })
+    useEffect(() => {
+        socket.on('msg', (msg) => {
+          setData((prevMessages) => [...prevMessages, msg]);
+        });
+    
+        return () => {
+          socket.off('msg');
+        };
+      }, []);
 
 
 
